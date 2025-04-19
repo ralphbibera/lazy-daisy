@@ -57,10 +57,14 @@ const Item = ({
   ...props
 }: React.ComponentProps<typeof MenuItem> & React.PropsWithChildren) => {
   return (
-    <MenuItem {...props} className={cn("menu-item", className)}>
+    <MenuItem {...props} className={className}>
       {({ isFocused, isDisabled }) => (
-        <li className={cn(isDisabled && "menu-disabled")}>
-          <span className={cn(isFocused && "menu-focus")}>{children}</span>
+        <li
+          className={cn({
+            "menu-disabled": isDisabled,
+          })}
+        >
+          <span className={cn({ "menu-focus": isFocused })}>{children}</span>
         </li>
       )}
     </MenuItem>
