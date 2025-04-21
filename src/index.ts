@@ -1,5 +1,6 @@
 export * as DropdownMenu from "./dropdown-menu";
 export * as Select from "./select";
+export * as Modal from "./modal";
 export * as Accordion from "./accordion";
 export * as Card from "./card";
 export * from "./avatar";
@@ -8,3 +9,5 @@ export * from "./badge";
 export * from "./checkbox";
 export * from "./loading";
 export * from "./utils";
+export * from "./input";
+export * from "./alert";

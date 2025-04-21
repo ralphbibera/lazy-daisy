@@ -37,13 +37,14 @@ const Checkbox = ({
   VariantProps<typeof checkboxVariants>) => {
   return (
     <RACheckbox {...props} className="label">
-      {({ isSelected, isDisabled }) => (
+      {({ isSelected, isDisabled, isRequired }) => (
         <>
           <input
             type="checkbox"
             className={cn(checkboxVariants({ color, size }), className)}
             checked={isSelected}
             disabled={isDisabled}
+            required={isRequired}
           />
           {children}
         </>

@@ -1,11 +1,6 @@
-import {
-  MenuTrigger,
-  Button,
-  Popover,
-  Menu,
-  MenuItem,
-} from "react-aria-components";
+import { MenuTrigger, Popover, Menu, MenuItem } from "react-aria-components";
 import { cn } from "./utils";
+import { Button } from "./button";
 
 const Provider = ({
   children,
@@ -15,15 +10,10 @@ const Provider = ({
 };
 
 const Trigger = ({
-  className,
   children,
   ...props
 }: React.ComponentProps<typeof Button>) => {
-  return (
-    <Button {...props} className={cn("btn", className)}>
-      {children}
-    </Button>
-  );
+  return <Button {...props}>{children}</Button>;
 };
 
 const Portal = ({
@@ -43,7 +33,7 @@ const Content = ({
       {...props}
       className={cn(
         "menu bg-base-200 rounded-box w-[var(--trigger-width)] min-w-max",
-        className
+        className,
       )}
     >
       {children}

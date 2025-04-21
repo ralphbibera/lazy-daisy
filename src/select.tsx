@@ -103,7 +103,7 @@ const Item = ({
             {
               <>
                 {children}
-                {isSelected && <Check className="ml-auto w-4 h-4" />}
+                {isSelected && <Check className="ml-auto h-4 w-4" />}
               </>
             }
           </span>

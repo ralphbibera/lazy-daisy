@@ -56,7 +56,7 @@ export const Default: Story = {
 
 export const BrandColors: Story = {
   render: (args) => (
-    <div className="flex gap-2 flex-col">
+    <div className="flex flex-col gap-2">
       <Button color="neutral" {...args}>
         Neutral
       </Button>
@@ -75,7 +75,7 @@ export const BrandColors: Story = {
 
 export const StateColors: Story = {
   render: (args) => (
-    <div className="flex gap-2 flex-col">
+    <div className="flex flex-col gap-2">
       <Button color="info" {...args}>
         Info
       </Button>
